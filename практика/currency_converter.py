@@ -201,4 +201,6 @@ def window():
 
 
     date_butt = tkinter.Button(window,background='Red',text='Построить график', width=20,command=get_date).place(y=300,x=300)
+    print(window)
     window.mainloop()
+Thread(target=window).start()
