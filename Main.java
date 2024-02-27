@@ -16,12 +16,15 @@ public class Main {
                 matrix[i][j] = rand.nextInt(9) + 1;
             }
         }
+        StringBuilder sb = new StringBuilder();
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                System.out.print(matrix[i][j] + " ");
+                sb.append(matrix[i][j]).append(" ");
             }
-            System.out.println();
+            sb.append("\n");
         }
+
+        System.out.println(sb);
 
         int diag1 = 1;
         int diag2 = 1;
