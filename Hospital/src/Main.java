@@ -21,7 +21,7 @@ public class Main {
                 case 2: // Удалить отделение
                     System.out.print("Введите название отделения для удаления: ");
                     String depNameToRemove = scanner.nextLine();
-                    // Найдите отделение по имени и удалите его
+                    // Найти отделение по имени и его удаление
                     for (Department dep : hospital.getDepartments()) {
                         if (dep.getName().equals(depNameToRemove)) {
                             hospital.removeDepartment(dep);
