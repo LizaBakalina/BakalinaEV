@@ -24,16 +24,16 @@ public class statisticHospitalGUI {
         frame.setSize(600, 400);
         frame.setLayout(new BorderLayout());
 
-        // Модель и список для отделений
+        // список для отделений
         departmentListModel = new DefaultListModel<>();
         departmentList = new JList<>(departmentListModel);
         departmentList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
-        // Модель и список для пациентов
+        // список для пациентов
         patientListModel = new DefaultListModel<>();
         patientList = new JList<>(patientListModel);
 
-        // Панель для отображения списков
+        // отображения списков
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(1, 2));
         panel.add(new JScrollPane(departmentList));
@@ -48,17 +48,17 @@ public class statisticHospitalGUI {
             }
         });
 
-        // Добавление элементов на фрейм
+        // Добавление элементов
         frame.add(panel, BorderLayout.CENTER);
         frame.add(refreshButton, BorderLayout.SOUTH);
 
-        // Изначально обновляем список отделений
+        // бновляем список отделений
         updateDepartmentList();
 
         frame.setVisible(true);
     }
 
-    // Метод для обновления списка отделений
+    // обновленине списка отделений
     private void updateDepartmentList() {
         departmentListModel.clear();
         List<Department> departments = hospital.getDepartments();
@@ -67,7 +67,7 @@ public class statisticHospitalGUI {
         }
     }
     public void show() {
-        // Создаем экземпляр Hospital и запускаем GUI
+        
         Hospital hospital = new Hospital();
         SwingUtilities.invokeLater(() -> new statisticHospitalGUI(hospital));
     }
