@@ -24,7 +24,7 @@ class HospitalGUI extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
-        // Панель для ввода данных
+        
         JPanel inputPanel = new JPanel();
         inputPanel.setLayout(new GridLayout(5, 2));
 
@@ -47,11 +47,6 @@ class HospitalGUI extends JFrame {
         JButton addDepartmentButton = new JButton("Добавить отделение");
         addDepartmentButton.addActionListener(new AddDepartmentListener());
         inputPanel.add(addDepartmentButton);
-
-        //JButton showDepartmentButton = new JButton("Показать отделения");
-        //showDepartmentButton.show();
-        //inputPanel.add(showDepartmentButton)
-
 
         JButton addPatientButton = new JButton("Добавить пациента");
         addPatientButton.addActionListener(new AddPatientListener());
